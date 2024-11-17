@@ -1,0 +1,11 @@
+[build]
+target = "./src/arch/powerpc-unknown-eabi.json"
+
+[target.powerpc-unknown-eabi]
+runner = "./src/arch/dolphin-runner.sh"
+
+[unstable]
+build-std = ["core", "alloc"]
+
+[toolchain]
+channel = "nightly"
