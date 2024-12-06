@@ -1,3 +1,8 @@
+[alias]
+run-emu = ["run", "--config", "target.powerpc-unknown-eabi.runner = './src/arch/dolphin-runner.sh'"]
+run-net = ["run", "--config", "target.powerpc-unknown-eabi.runner = './src/arch/net-runner.sh'"]
+
+
 [build]
 target = "./src/arch/powerpc-unknown-eabi.json"
 
@@ -9,3 +14,7 @@ build-std = ["core", "alloc"]
 
 [toolchain]
 channel = "nightly"
+
+[env]
+WIILOAD = "tcp:<wii_ip>"
+WIILOAD_BIN = "<path_to_wiiload>"
